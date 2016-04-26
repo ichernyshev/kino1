@@ -1,0 +1,1271 @@
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru-RU"><head>
+    <link rel="stylesheet" type="text/css" href="/css/widget.css?v=1.235">
+<link rel="stylesheet" type="text/css" href="/css/widget-mobile.css?v=1.235">
+<script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/assets/811b0d6d/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/811b0d6d/jui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/jquery.ikSelect.min.js"></script>
+<script type="text/javascript" src="/js/nicescroll.js"></script>
+<script type="text/javascript" src="/js/kassa/jquery.postmessage.min.js"></script>
+<script type="text/javascript" src="/js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="/js/kassa/hammer.min.js"></script>
+<script type="text/javascript" src="/js/kassa/jquery.hammer.js"></script>
+<script type="text/javascript" src="/js/kassa/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="/js/kassa/kassa.js?v=1.235"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+ $.ajaxSetup({
+                         data: {"YII_CSRF_TOKEN": "f5b87e8b66f2b48526453da182d14c05ec63b890"},
+                         cache:false
+                    });
+/*]]>*/
+</script>
+<title>Касса КАРО :: Выбор места</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Сеть кинотеатров КАРО, расписание сеансов. Заказ и бронирование билетов.">
+    <meta name="keywords" content="билеты в кино, купить билеты в кино, билеты в кино онлайн, билеты онлайн, билеты в кино со скидкой, продажа билетов в кино, IMAX, LUXE, 3D">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> <!-- TODO: Нарисовать фавикону -->
+    <meta name="yandex-verification" content="">
+</head>
+
+<body>
+<div id="widget" class="noselect" style="height: 505px;">
+    <div class="header">
+                <div class="close" href="#"><i class="fa fa-times"></i></div>
+                            <div class="mobile film-name-placeholder"><span class="film-placeholder">
+                            Бэтмен против Супермена: На заре справедливости                        </span><span class="session-placeholder">
+                                    Зал №9, Сегодня, 19 апреля, 21:20
+                                </span></div>
+            </div>
+    <div class="content" id="widget-content" style="height: 451px;">
+        <div class="static-block desktop" id="statick_top">
+    <div class="breadcrumbs-outer">
+    <div class="breadcrumbs-border-top">
+        <div class="breadcrumbs-border-bottom">
+            <ul class="breadcrumbs">
+                <li class="active">
+                    <div class="breadcrumbs-heading">
+                        <span class="label-heading">Фильм</span>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="breadcrumbs-content">
+                        <div id="wi-film" class="film breadcrumbs-inner">
+                            <span>Бэтмен против Супермена: На заре справедливости</span>                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                                <li class="active ">
+                    <div class="breadcrumbs-heading">
+                        <span class="label-heading">Кинотеатр / Сеанс</span>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="breadcrumbs-content">
+                                                                                                                <div id="wi-theatre" class="theatre breadcrumbs-inner">
+                                    <span>Каро&nbsp;9 Атриум</span>
+                                </div>
+                                <div id="wi-session" class="session breadcrumbs-inner">
+                                    <span>Зал №9, Сегодня, 19 апреля, 21:20</span>
+                                </div>
+                                                                        </div>
+                    <div class="clear"></div>
+                </li>
+                <li class="active current tickets-step">
+                    <div class="breadcrumbs-heading">
+                        <span class="label-heading">Билеты&nbsp;/&nbsp;Бар</span>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="breadcrumbs-content">
+                        <div class="breadcrumbs-inner"></div>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <div class="breadcrumbs-heading">
+                        <span class="label-heading">Оплата</span>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="breadcrumbs-content">
+                        <div id="wi-sum" class="sum breadcrumbs-inner">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>    <div class="clear"></div>
+    <div class="step-name seats">
+        <h3>Выберите места</h3>
+        <span class="inline">Шаг 3 из 4</span>
+    </div>
+    <div class="ticket-holder" style="display:none">
+    <!--Шаблон билета-->
+    <div class="template ticket-item-holder" style="display:none">
+        <div class="ticket">
+            <div class="bg">
+                <img src="/img/ticket-widget/ticket-bg.png" alt="">
+            </div>
+            <div class="content-ticket">
+                <div class="rowNum"><span>5</span> ряд</div>
+                <div class="placeNum"><span>2</span> место</div>
+            </div>
+            <a href="" class="ticket-close-btn" data-place-id="64510">
+                <img src="/img/ticket-widget/ticket-delete.png" alt="">
+            </a>
+        </div>
+        <div class="glasses-holder" style="display:none">
+            <div class="separator"><span>+</span></div>
+            <div class="glasses">
+                <div class="bg">
+                    <img src="/img/ticket-widget/glasses.png" alt="">
+                </div>
+                <a href="" class="glasses-close-btn" data-place-id="64510">
+                    <img src="/img/ticket-widget/ticket-delete.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Блок для вывода билетов-->
+    <div class="ticket-container"></div>
+    <!--Иконка очков-->
+        <div class="clear"></div>
+</div>    <div class="clear"></div>
+</div>
+<div class="content-inner">
+    <div class="scroll-block" style="height: 178px; overflow: auto;">
+        <div class="scroll-inner">
+            <div id="hall" class="widget-slide active">
+                <div class="hall" id="hall-object-place" style="font-size: 1em; left: 0px; top: -150px;">
+    <div class="hscheme" style="margin:0 auto; width:42.625em;height:19.25em; position: relative;">
+        <div class="legend-left" style="width:2.75em; height:19.25em;position: absolute; top:0; left:0;">
+            
+<div class="row-label" style="bottom:17.875em; height: 1.375em;">
+    <span>Экран</span>
+</div>
+<div class="row-label" style="bottom:0em; height: 1.375em;">
+    <span>12</span>
+</div>
+<div class="row-label" style="bottom:1.375em; height: 1.375em;">
+    <span>11</span>
+</div>
+<div class="row-label" style="bottom:2.75em; height: 1.375em;">
+    <span>10</span>
+</div>
+<div class="row-label" style="bottom:4.125em; height: 1.375em;">
+    <span>9</span>
+</div>
+<div class="row-label" style="bottom:5.5em; height: 1.375em;">
+    <span>8</span>
+</div>
+<div class="row-label" style="bottom:6.875em; height: 1.375em;">
+    <span>7</span>
+</div>
+<div class="row-label" style="bottom:8.25em; height: 1.375em;">
+    <span>6</span>
+</div>
+<div class="row-label" style="bottom:9.625em; height: 1.375em;">
+    <span>5</span>
+</div>
+<div class="row-label" style="bottom:11em; height: 1.375em;">
+    <span>4</span>
+</div>
+<div class="row-label" style="bottom:12.375em; height: 1.375em;">
+    <span>3</span>
+</div>
+<div class="row-label" style="bottom:13.75em; height: 1.375em;">
+    <span>2</span>
+</div>
+<div class="row-label" style="bottom:15.125em; height: 1.375em;">
+    <span>1</span>
+</div>        </div>
+        <div class="hall-elements" style=" width:37.125em;height:19.25em; position: absolute; top:0; left:2.75em;">
+            <div style="width:37.125em; height:2.2211538461538em; padding-top:0.52884615384615em;">
+                <div class="hall-screen"></div>
+            </div>
+            <div class="hall-seats" style="width:37.125em; height:16.5em; position: relative;">
+                                                                                                                                            <div class="place place-standard free-place normal" style="right:0em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="27" data-row="12" data-id="0144_1_0_0_12_27" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>27</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:1.375em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="26" data-row="12" data-id="0144_1_0_1_12_26" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>26</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:2.75em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="25" data-row="12" data-id="0144_1_0_2_12_25" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>25</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="24" data-row="12" data-id="0144_1_0_3_12_24" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>24</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="23" data-row="12" data-id="0144_1_0_4_12_23" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>23</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="12" data-id="0144_1_0_5_12_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="12" data-id="0144_1_0_6_12_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="12" data-id="0144_1_0_7_12_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="12" data-id="0144_1_0_8_12_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="12" data-id="0144_1_0_9_12_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="12" data-id="0144_1_0_10_12_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="12" data-id="0144_1_0_11_12_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="12" data-id="0144_1_0_12_12_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="12" data-id="0144_1_0_13_12_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="12" data-id="0144_1_0_14_12_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="12" data-id="0144_1_0_15_12_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="12" data-id="0144_1_0_16_12_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="12" data-id="0144_1_0_17_12_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="12" data-id="0144_1_0_18_12_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="12" data-id="0144_1_0_19_12_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="12" data-id="0144_1_0_20_12_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="12" data-id="0144_1_0_21_12_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="12" data-id="0144_1_0_22_12_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="12" data-id="0144_1_0_23_12_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="12" data-id="0144_1_0_24_12_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:34.375em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="12" data-id="0144_1_0_25_12_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:35.75em;bottom:0em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="12" data-id="0144_1_0_26_12_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:2.75em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="23" data-row="11" data-id="0144_1_1_2_11_23" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>23</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="11" data-id="0144_1_1_3_11_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="11" data-id="0144_1_1_4_11_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="11" data-id="0144_1_1_5_11_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="11" data-id="0144_1_1_6_11_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="11" data-id="0144_1_1_7_11_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="11" data-id="0144_1_1_8_11_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="11" data-id="0144_1_1_9_11_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="11" data-id="0144_1_1_10_11_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="11" data-id="0144_1_1_11_11_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="11" data-id="0144_1_1_12_11_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="11" data-id="0144_1_1_13_11_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="11" data-id="0144_1_1_14_11_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="11" data-id="0144_1_1_15_11_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="11" data-id="0144_1_1_16_11_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="11" data-id="0144_1_1_17_11_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="11" data-id="0144_1_1_18_11_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="11" data-id="0144_1_1_19_11_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="11" data-id="0144_1_1_20_11_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="11" data-id="0144_1_1_21_11_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="11" data-id="0144_1_1_22_11_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="11" data-id="0144_1_1_23_11_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:1.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="11" data-id="0144_1_1_24_11_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:2.75em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="23" data-row="10" data-id="0144_1_2_2_10_23" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>23</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="10" data-id="0144_1_2_3_10_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="10" data-id="0144_1_2_4_10_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="10" data-id="0144_1_2_5_10_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="10" data-id="0144_1_2_6_10_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="10" data-id="0144_1_2_7_10_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="10" data-id="0144_1_2_8_10_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="10" data-id="0144_1_2_9_10_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="10" data-id="0144_1_2_10_10_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="10" data-id="0144_1_2_11_10_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="10" data-id="0144_1_2_12_10_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="10" data-id="0144_1_2_13_10_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="10" data-id="0144_1_2_14_10_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="10" data-id="0144_1_2_15_10_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="10" data-id="0144_1_2_16_10_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="10" data-id="0144_1_2_17_10_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="10" data-id="0144_1_2_18_10_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="10" data-id="0144_1_2_19_10_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="10" data-id="0144_1_2_20_10_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="10" data-id="0144_1_2_21_10_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="10" data-id="0144_1_2_22_10_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="10" data-id="0144_1_2_23_10_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:2.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="10" data-id="0144_1_2_24_10_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="9" data-id="0144_1_3_3_9_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="9" data-id="0144_1_3_4_9_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="9" data-id="0144_1_3_5_9_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="9" data-id="0144_1_3_6_9_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="9" data-id="0144_1_3_7_9_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="9" data-id="0144_1_3_8_9_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="9" data-id="0144_1_3_9_9_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="9" data-id="0144_1_3_10_9_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="9" data-id="0144_1_3_11_9_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="9" data-id="0144_1_3_16_9_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="9" data-id="0144_1_3_17_9_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="9" data-id="0144_1_3_18_9_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="9" data-id="0144_1_3_19_9_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="9" data-id="0144_1_3_20_9_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="9" data-id="0144_1_3_21_9_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="9" data-id="0144_1_3_22_9_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="9" data-id="0144_1_3_23_9_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:4.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="9" data-id="0144_1_3_24_9_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="8" data-id="0144_1_4_3_8_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="8" data-id="0144_1_4_4_8_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="8" data-id="0144_1_4_5_8_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="8" data-id="0144_1_4_6_8_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="8" data-id="0144_1_4_7_8_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="8" data-id="0144_1_4_8_8_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="8" data-id="0144_1_4_9_8_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="8" data-id="0144_1_4_10_8_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="8" data-id="0144_1_4_11_8_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="8" data-id="0144_1_4_12_8_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="8" data-id="0144_1_4_13_8_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="8" data-id="0144_1_4_14_8_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="8" data-id="0144_1_4_15_8_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="8" data-id="0144_1_4_16_8_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="8" data-id="0144_1_4_17_8_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="8" data-id="0144_1_4_18_8_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="8" data-id="0144_1_4_19_8_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="8" data-id="0144_1_4_20_8_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="8" data-id="0144_1_4_21_8_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="8" data-id="0144_1_4_22_8_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="8" data-id="0144_1_4_23_8_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:5.5em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="8" data-id="0144_1_4_24_8_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:2.75em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="23" data-row="7" data-id="0144_1_5_2_7_23" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>23</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="7" data-id="0144_1_5_3_7_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="7" data-id="0144_1_5_4_7_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="7" data-id="0144_1_5_5_7_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="7" data-id="0144_1_5_6_7_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="7" data-id="0144_1_5_7_7_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="7" data-id="0144_1_5_8_7_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="7" data-id="0144_1_5_9_7_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="7" data-id="0144_1_5_10_7_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="7" data-id="0144_1_5_11_7_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="7" data-id="0144_1_5_12_7_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="7" data-id="0144_1_5_13_7_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="7" data-id="0144_1_5_14_7_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="7" data-id="0144_1_5_15_7_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="7" data-id="0144_1_5_16_7_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="7" data-id="0144_1_5_17_7_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="7" data-id="0144_1_5_18_7_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="7" data-id="0144_1_5_19_7_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="7" data-id="0144_1_5_20_7_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="7" data-id="0144_1_5_21_7_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="7" data-id="0144_1_5_22_7_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="7" data-id="0144_1_5_23_7_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:6.875em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="7" data-id="0144_1_5_24_7_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:2.75em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="23" data-row="6" data-id="0144_1_6_2_6_23" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>23</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="6" data-id="0144_1_6_3_6_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="6" data-id="0144_1_6_4_6_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="6" data-id="0144_1_6_5_6_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="6" data-id="0144_1_6_6_6_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="6" data-id="0144_1_6_7_6_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="6" data-id="0144_1_6_8_6_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="6" data-id="0144_1_6_9_6_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="6" data-id="0144_1_6_10_6_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="6" data-id="0144_1_6_11_6_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="6" data-id="0144_1_6_12_6_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="6" data-id="0144_1_6_13_6_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="6" data-id="0144_1_6_14_6_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="6" data-id="0144_1_6_15_6_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="6" data-id="0144_1_6_16_6_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="6" data-id="0144_1_6_17_6_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="6" data-id="0144_1_6_18_6_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="6" data-id="0144_1_6_19_6_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="6" data-id="0144_1_6_20_6_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="6" data-id="0144_1_6_21_6_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="6" data-id="0144_1_6_22_6_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="6" data-id="0144_1_6_23_6_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:8.25em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="6" data-id="0144_1_6_24_6_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:2.75em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="23" data-row="5" data-id="0144_1_7_2_5_23" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>23</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="5" data-id="0144_1_7_3_5_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="5" data-id="0144_1_7_4_5_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="5" data-id="0144_1_7_5_5_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="5" data-id="0144_1_7_6_5_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="5" data-id="0144_1_7_7_5_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="5" data-id="0144_1_7_8_5_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="5" data-id="0144_1_7_9_5_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="5" data-id="0144_1_7_10_5_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="5" data-id="0144_1_7_11_5_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="5" data-id="0144_1_7_12_5_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="5" data-id="0144_1_7_13_5_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="5" data-id="0144_1_7_14_5_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="5" data-id="0144_1_7_15_5_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="5" data-id="0144_1_7_16_5_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="5" data-id="0144_1_7_17_5_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="5" data-id="0144_1_7_18_5_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="5" data-id="0144_1_7_19_5_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="5" data-id="0144_1_7_20_5_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="5" data-id="0144_1_7_21_5_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="5" data-id="0144_1_7_22_5_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="5" data-id="0144_1_7_23_5_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:9.625em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="5" data-id="0144_1_7_24_5_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:2.75em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="23" data-row="4" data-id="0144_1_8_2_4_23" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>23</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="4" data-id="0144_1_8_3_4_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="4" data-id="0144_1_8_4_4_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="4" data-id="0144_1_8_5_4_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="4" data-id="0144_1_8_6_4_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="4" data-id="0144_1_8_7_4_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="4" data-id="0144_1_8_8_4_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="4" data-id="0144_1_8_9_4_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="4" data-id="0144_1_8_10_4_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="4" data-id="0144_1_8_11_4_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="4" data-id="0144_1_8_12_4_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="4" data-id="0144_1_8_13_4_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="4" data-id="0144_1_8_14_4_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="4" data-id="0144_1_8_15_4_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="4" data-id="0144_1_8_16_4_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="4" data-id="0144_1_8_17_4_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="4" data-id="0144_1_8_18_4_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="4" data-id="0144_1_8_19_4_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="4" data-id="0144_1_8_20_4_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="4" data-id="0144_1_8_21_4_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="4" data-id="0144_1_8_22_4_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="4" data-id="0144_1_8_23_4_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:11em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="4" data-id="0144_1_8_24_4_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:2.75em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="23" data-row="3" data-id="0144_1_9_2_3_23" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>23</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="3" data-id="0144_1_9_3_3_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="3" data-id="0144_1_9_4_3_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="3" data-id="0144_1_9_5_3_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="3" data-id="0144_1_9_6_3_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="3" data-id="0144_1_9_7_3_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="3" data-id="0144_1_9_8_3_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="3" data-id="0144_1_9_9_3_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="3" data-id="0144_1_9_10_3_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="3" data-id="0144_1_9_11_3_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="3" data-id="0144_1_9_12_3_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="3" data-id="0144_1_9_13_3_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="3" data-id="0144_1_9_14_3_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="3" data-id="0144_1_9_15_3_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="3" data-id="0144_1_9_16_3_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="3" data-id="0144_1_9_17_3_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="3" data-id="0144_1_9_18_3_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="3" data-id="0144_1_9_19_3_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="3" data-id="0144_1_9_20_3_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="3" data-id="0144_1_9_21_3_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="3" data-id="0144_1_9_22_3_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="3" data-id="0144_1_9_23_3_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:12.375em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="3" data-id="0144_1_9_24_3_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:2.75em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="23" data-row="2" data-id="0144_1_10_2_2_23" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>23</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:4.125em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="22" data-row="2" data-id="0144_1_10_3_2_22" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>22</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:5.5em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="21" data-row="2" data-id="0144_1_10_4_2_21" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>21</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:6.875em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="20" data-row="2" data-id="0144_1_10_5_2_20" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>20</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="2" data-id="0144_1_10_6_2_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="2" data-id="0144_1_10_7_2_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="2" data-id="0144_1_10_8_2_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="2" data-id="0144_1_10_9_2_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="2" data-id="0144_1_10_10_2_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="2" data-id="0144_1_10_11_2_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="2" data-id="0144_1_10_12_2_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="2" data-id="0144_1_10_13_2_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="2" data-id="0144_1_10_14_2_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="2" data-id="0144_1_10_15_2_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="2" data-id="0144_1_10_16_2_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="2" data-id="0144_1_10_17_2_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="2" data-id="0144_1_10_18_2_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="2" data-id="0144_1_10_19_2_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="2" data-id="0144_1_10_20_2_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:28.875em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="4" data-row="2" data-id="0144_1_10_21_2_4" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>4</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:30.25em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="3" data-row="2" data-id="0144_1_10_22_2_3" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>3</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:31.625em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="2" data-row="2" data-id="0144_1_10_23_2_2" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>2</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:33em;bottom:13.75em;width:1.375em;height:1.375em;" data-isfree="1" data-place="1" data-row="2" data-id="0144_1_10_24_2_1" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>1</span>                                </div>                                </div>                                                                                                                                                            <div class="place place-standard free-place normal" style="right:8.25em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="19" data-row="1" data-id="0144_1_11_6_1_19" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>19</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:9.625em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="18" data-row="1" data-id="0144_1_11_7_1_18" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>18</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:11em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="17" data-row="1" data-id="0144_1_11_8_1_17" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>17</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:12.375em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="16" data-row="1" data-id="0144_1_11_9_1_16" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>16</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:13.75em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="15" data-row="1" data-id="0144_1_11_10_1_15" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>15</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:15.125em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="14" data-row="1" data-id="0144_1_11_11_1_14" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>14</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:16.5em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="13" data-row="1" data-id="0144_1_11_12_1_13" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>13</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:17.875em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="12" data-row="1" data-id="0144_1_11_13_1_12" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>12</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:19.25em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="11" data-row="1" data-id="0144_1_11_14_1_11" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>11</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:20.625em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="10" data-row="1" data-id="0144_1_11_15_1_10" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>10</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:22em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="9" data-row="1" data-id="0144_1_11_16_1_9" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>9</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:23.375em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="8" data-row="1" data-id="0144_1_11_17_1_8" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>8</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:24.75em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="7" data-row="1" data-id="0144_1_11_18_1_7" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>7</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:26.125em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="6" data-row="1" data-id="0144_1_11_19_1_6" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>6</span>                                </div>                                </div>                                                            <div class="place place-standard free-place normal" style="right:27.5em;bottom:15.125em;width:1.375em;height:1.375em;" data-isfree="1" data-place="5" data-row="1" data-id="0144_1_11_20_1_5" data-price="40800" data-type="0144" data-addprice="0">                                <div class="pm" style="width: 18px; height: 18px; position: relative; top: 0px; left: 0px;"><span>5</span>                                </div>                                </div>                                                                                                    </div>
+        </div>
+        <div class="legend-left" style="width:2.75em; height:19.25em;position: absolute; top:0; right:0;">
+            
+<div class="row-label" style="bottom:17.875em; height: 1.375em;">
+    <span>Экран</span>
+</div>
+<div class="row-label" style="bottom:0em; height: 1.375em;">
+    <span>12</span>
+</div>
+<div class="row-label" style="bottom:1.375em; height: 1.375em;">
+    <span>11</span>
+</div>
+<div class="row-label" style="bottom:2.75em; height: 1.375em;">
+    <span>10</span>
+</div>
+<div class="row-label" style="bottom:4.125em; height: 1.375em;">
+    <span>9</span>
+</div>
+<div class="row-label" style="bottom:5.5em; height: 1.375em;">
+    <span>8</span>
+</div>
+<div class="row-label" style="bottom:6.875em; height: 1.375em;">
+    <span>7</span>
+</div>
+<div class="row-label" style="bottom:8.25em; height: 1.375em;">
+    <span>6</span>
+</div>
+<div class="row-label" style="bottom:9.625em; height: 1.375em;">
+    <span>5</span>
+</div>
+<div class="row-label" style="bottom:11em; height: 1.375em;">
+    <span>4</span>
+</div>
+<div class="row-label" style="bottom:12.375em; height: 1.375em;">
+    <span>3</span>
+</div>
+<div class="row-label" style="bottom:13.75em; height: 1.375em;">
+    <span>2</span>
+</div>
+<div class="row-label" style="bottom:15.125em; height: 1.375em;">
+    <span>1</span>
+</div>        </div>
+    </div></div>
+                <div id="limit" style="display: none;"><div class="inner">
+                        За один раз можно купить только не более 5 билетов
+                </div></div>
+            </div>
+            <div id="concessions" class="widget-slide">
+<div data-image_id="14473" class="concession-item" data-id="0000000025_3027">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/14473/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Детские 3D-очки</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>60&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_3027" data-name="Детские очки 3D(к)" data-value="0" data-price="6000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div data-image_id="20939" class="concession-item" data-id="0000000025_3440">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/20939/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Сет "Хоккей" с сладким поп-корном. Акция от Coca-Cola! Получи возможность выиграть билеты на Чемпионат мира по хоккею 2016!!!</div>
+                    <div class="text">Поп-корн большой сладкий, 2 напитка Coca-Cola, Fanta или Sprite в бутылке на выбор, 0,5 л.</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>569&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_3440" data-name="Сет Хоккей (сладкий)" data-value="0" data-price="56900">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+    <!--div class="clear"></div-->
+<div data-image_id="20940" class="concession-item" data-id="0000000025_3441">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/20940/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Сет "Хоккей" с соленым поп-корном. Акция от Coca-Cola! Получи возможность выиграть билеты на Чемпионат мира по хоккею 2016!!!</div>
+                    <div class="text">Поп-корн большой соленый, 2 напитка Coca-Cola, Fanta или Sprite в бутылке на выбор, 0,5 л.</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>569&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_3441" data-name="Сет Хоккей (соленый)" data-value="0" data-price="56900">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div data-image_id="17739" class="concession-item" data-id="0000000025_2822">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/17739/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Комбо "КАРОлевский" с сладким поп-корном</div>
+                    <div class="text">Поп-корн большой сладкий, 2 напитка Coca-Cola или Coca-Cola Light, 0,4 л.</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>550&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2822" data-name="КАРОлевский сладкий (к)" data-value="0" data-price="55000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+    <!--div class="clear"></div-->
+<div data-image_id="17740" class="concession-item" data-id="0000000025_2821">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/17740/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Комбо "КАРОлевский" с соленым поп-корном</div>
+                    <div class="text">Поп-корн большой соленый, 2 напитка Coca-Cola или Coca-Cola Light, 0,4 л.</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>550&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2821" data-name="КАРОлевский соленый (к)" data-value="0" data-price="55000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div data-image_id="17722" class="concession-item" data-id="0000000025_3113">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/17722/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Комбо "Персона" с сладким поп-корном</div>
+                    <div class="text">Поп-корн маленький сладкий, напиток Coca-Cola или Coca-Cola Light, 0,4 л.</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>370&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_3113" data-name="Персона сладкий (к)" data-value="0" data-price="37000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+    <!--div class="clear"></div-->
+<div data-image_id="17723" class="concession-item" data-id="0000000025_3112">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/17723/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Комбо "Персона" с соленым поп-корном</div>
+                    <div class="text">Поп-корн маленький соленый, напиток Coca-Cola или Coca-Cola Light, 0,4 л.</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>370&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_3112" data-name="Персона соленый (к)" data-value="0" data-price="37000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div data-image_id="9633" class="concession-item" data-id="0000000025_2804">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/9633/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Coca-Cola, 0.5 л.</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>110&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2804" data-name="Кока-кола 0.5 (к)" data-value="0" data-price="11000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+    <!--div class="clear"></div-->
+<div data-image_id="9632" class="concession-item" data-id="0000000025_2805">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/9632/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Coca-Cola, 0.8 л.</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>140&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2805" data-name="Кока-Кола 0.8 (к)" data-value="0" data-price="14000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div data-image_id="9634" class="concession-item" data-id="0000000025_2801">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/9634/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Вода Bon Aqua, 0,5 л.</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>110&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2801" data-name="&quot;Бон Аква&quot; 0.5 (к)" data-value="0" data-price="11000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+    <!--div class="clear"></div-->
+<div data-image_id="14268" class="concession-item" data-id="0000000025_2802">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/14268/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Coca-Cola, Fanta или Sprite в бутылке на выбор, 0,5 л.</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>140&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2802" data-name="Кола/Фанта/Спрайт бутылка 0.5 (к)" data-value="0" data-price="14000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div data-image_id="9626" class="concession-item" data-id="0000000025_2800">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/9626/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Холодный чай "Nestea", 0,5 л.</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>120&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2800" data-name=" &quot;Нести&quot; 0.5 (к)" data-value="0" data-price="12000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+    <!--div class="clear"></div-->
+<div data-image_id="9636" class="concession-item" data-id="0000000025_2810">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/9636/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Поп-корн большой сладкий</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>390&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2810" data-name="Большой сладкий (к)" data-value="0" data-price="39000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div data-image_id="9630" class="concession-item" data-id="0000000025_2813">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/9630/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Поп-корн маленький сладкий</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>310&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2813" data-name="Маленький сладкий (к)" data-value="0" data-price="31000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+    <!--div class="clear"></div-->
+<div data-image_id="9628" class="concession-item" data-id="0000000025_2815">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/9628/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Поп-корн стандартный сладкий</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>360&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2815" data-name="Стандартный сладкий (к)" data-value="0" data-price="36000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div data-image_id="9635" class="concession-item" data-id="0000000025_2811">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/9635/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Поп-корн большой соленый</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>390&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2811" data-name="Большой соленый (к)" data-value="0" data-price="39000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+    <!--div class="clear"></div-->
+<div data-image_id="9629" class="concession-item" data-id="0000000025_2814">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/9629/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Поп-корн маленький соленый</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>310&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2814" data-name="Маленький соленый (к)" data-value="0" data-price="31000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div data-image_id="9627" class="concession-item" data-id="0000000025_2816">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/9627/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Поп-корн стандартный соленый</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>360&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_2816" data-name="Стандартный соленый (к)" data-value="0" data-price="36000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+    <!--div class="clear"></div-->
+<div data-image_id="13895" class="concession-item" data-id="0000000025_3087">
+    <table>
+        <tbody><tr>
+            <td class="concession-left">
+                <div class="image-concession-holder">
+                                            <img src="https://karofilm.ru/api/poster/id/13895/w/100/h/100" alt="">
+                                    </div>
+            </td>
+            <td class="concession-right">
+                <div class="description">
+                    <div class="name">Чипсы "Начос"</div>
+                    <div class="text"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td class="concession-left">
+                <div class="price-statick">
+                    <span>340&nbsp;<i class="rub"></i></span>
+                </div>
+            </td>
+            <td class="concession-right">
+                <div class="concession-counter">
+                    <div class="counter-form">
+                        <a class="button-concession minus" href="#minus"></a>
+                        <div class="input-holder">
+                            <div class="concession-quantity" data-isglasses="0" data-id="0000000025_3087" data-name="Чипсы &quot;Начос&quot; готовый (к)" data-value="0" data-price="34000">0</div>
+                        </div>
+                        <a class="button-concession plus" href="#plus"></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="buy-label"><span>Купить:</span></div>
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    </tbody></table>
+</div></div>
+            <div id="form" class="widget-slide">
+                <form id="BuyauthForm" class="ti-auth-form" action="/site/buy.merchant" method="post">
+<div style="display:none"><input type="hidden" value="f5b87e8b66f2b48526453da182d14c05ec63b890" name="YII_CSRF_TOKEN"></div>                <div class="step-row-inner close-top">
+                    <div class="auth-row">
+                        <div class="form">
+                            <div class="form-inner">
+                                <h3>Email для получения кода бронирования: </h3>
+                                <div class="buy-form-row">
+                                    <div class="buy-field-holder">
+                                        <input name="BuyauthForm[email]" id="BuyauthForm_email" type="text">                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <h3>Ваш телефон: </h3>
+                                <div class="buy-form-row">
+                                    <div class="phone-prepend"><span>+7</span></div>
+                                    <div class="buy-field-holder phone-holder">
+                                        <input name="BuyauthForm[phone]" id="BuyauthForm_phone" type="tel" autocomplete="off">                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="offer-holder">
+                                                                        <div class="offer checkbox"></div><div class="offer-label">Согласен с условиями <a target="_blank" href="/files/offer.docx">договора оферты</a></div>
+                                                                    </div>
+                                <div class="clear"></div>
+                                <div class="errors"></div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="info-inner">
+                                <p>На указанные email и телефон Вы получите сообщения с кодом бронирования.</p>
+                                <p>Если Вы уже зарегистрированный пользователь сайта, то Вы можете увидеть данную покупку в личном кабинете после авторизации.</p>
+                                <p style="font-size: 0.7em;">
+                                    Перед показом фильмов кинотеатр вправе демонстрировать рекламно-информационный блок (анонсы и/или рекламу) продолжительностью до 30 мин.
+                                </p>
+                                <p style="font-size: 0.7em;">
+                                    По вопросам возврата Вы можете обратиться к администратору кинотеатра.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="pay-summary">
+                        <div>
+                            <div class="secure-box accordion">
+    <h3 class="secure-title"><span class="text">Безопасность онлайн платежей</span><span class="ico">
+            <img class="ico-active" src="/img/ticket-widget/select-widget-arrow-gray-up.png" alt="">
+            <img class="ico-inactive" src="/img/ticket-widget/select-widget-arrow-gray-down.png" alt="">
+    </span></h3>
+    <div class="secure-content">
+        <p>Предоставляемая Вами персональная информация (имя, адрес, телефон, e-mail, номер кредитной карты) является конфиденциальной и не подлежит разглашению. Данные Вашей кредитной карты передаются только в зашифрованном виде и не сохраняются на нашем Web-сервере.</p>
+        <p>Безопасность обработки Интернет-платежей гарантирует ЗАО «Банк Русский Cтандарт». Все операции с платежными картами происходят в соответствии с   требованиями VISA International, MasterCard, American Express и других платежных систем. При передаче информации используются специальные технологии безопасности карточных онлайн-платежей, обработка данных ведется на безопасном высокотехнологичном сервере процессинговой компании.  В случаи использования регулярных платежей, при совершении первой операции номер Вашей карты и срок действия будут сохранены на стороне Банка в безопасном хранилище. По факту выполнения или оказания услуг со стороны компании, данные будут удалены автоматически. Все ресурсы Банка соответствуют стандартам безопасности PCI DSS.</p>
+        <p>При проведении операции, Вы будете дополнительно перенаправлены на страницу Банка-Эмитента для ввода подтверждающего кода безопасности (в случае если банк, выпустивший Вашу карту, поддерживает технологию 3DSecure, и Ваша карта также поддерживает данную программу).</p>
+        <p>3D Secure – процедура дополнительной аутентификации держателя карты, предназначенная для обеспечения гарантированной безопасности платежей по банковским картам в Сети Интернет.</p>
+        <p>Технологическое решение 3D Secure имеет свой собственный бренд в каждой из платежных систем:
+        </p><ul>
+            <li>- Verified by Visa – по картам платежной системы Visa Int.</li>
+            <li>- MasterCard Secure Code – по картам, выпущенным в рамках MasterCard Int</li>
+            <li>- SafeKey и JSecure – платежная система American Express и JCB соответственно.</li>
+        </ul>
+        <p></p>
+        <p>В независимости от названия, технология 3D Secure предполагает защищенную сессию при проведении интернет-транзакции и позволяет пользователям-держателям карты, подтвердить правомерность операции для Банка выпустивший карту.</p>
+        <p>В случае возникновения вопросов по поводу данной конфиденциальности предоставляемой Вами информации, Вы можете связаться с ЗАО «Банк Русский Cтандарт» по телефону: 8 (800) 200-6-200.</p>
+    </div>
+</div>
+<div class="pay-icons">
+    <p style="text-align: center;">
+        <img src="/img/paymentsecure/mc.png" alt="">
+        <img src="/img/paymentsecure/visa.png" alt="">
+        <img src="/img/paymentsecure/dc.png" alt="">
+        <img src="/img/paymentsecure/ae.png" alt="">
+        <img src="/img/paymentsecure/jcb.png" alt="">
+    </p>
+</div>                        </div>
+                    </div>
+                </div>
+                </form>            </div>
+            <div id="payment" class="widget-slide"></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="static-block" id="statick_bottom">
+    <div id="legend-output">
+<div class="wi-seats-description">
+    <div class="system-actions">
+                                    <span class="wi-seats-descr-place"><span class="s-d-standard-place "></span>Билет в тч скидка 5% (408 <i class="rub"></i>)</span>
+                        </div>
+    <div class="user-actions">
+        <span class="wi-seats-descr-place"><span class="s-d-taken-place"></span>Место занято</span>
+        <span class="wi-seats-descr-place"><span class="s-d-chosen-place"></span>Ваш выбор</span>
+    </div>
+</div></div>
+    <div href="/ticket/session/film/942/date/19.04.2016" class="prev"><span class="mobile">Назад</span><span class="desktop">Назад</span></div>
+    <a href="/ticket/createorder" class="next">
+        <div class="result">
+            <div class="mobile">
+                <div class="total">
+                    <span class="label">Итог: </span> <span class="data">0</span>&nbsp;<i class="rub"></i>
+                </div>
+                <div class="concessions result-glasses">
+                    <span class="label">Очки: </span> <span class="data">0</span>&nbsp;<i class="rub"></i>
+                </div>
+
+            </div>
+            <div class="desktop">
+                <span class="text-label">Далее</span>
+            </div>
+        </div>
+    </a>
+    <div class="summary-price desktop">
+        <div class="total result">
+            Итог: <span class="data">0</span>&nbsp;<i class="rub"></i>
+        </div>
+        <div class="glasses result-glasses">
+            Очки: <span class="data">0</span>&nbsp;<i class="rub"></i>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<script>
+    $('document').ready(function(){
+        WIDGET.state.step='place';
+        WIDGET.state.session='0000000025_35691';
+        WIDGET.state.city='1';
+        WIDGET.state.places=[];
+        WIDGET.state.glasses=[];
+        WIDGET.state.concessions=[];
+        WIDGET.state.offerChecked= false;
+        WIDGET.state.email='';
+        WIDGET.state.phone='';
+        WIDGET.state.rent_license=1;
+                WIDGET.state.key='';
+                                WIDGET.state.baseDomain='https://karofilm.ru';
+                        WIDGET.state.prev='/ticket/session/film/942/date/19.04.2016/key';
+                WIDGET.adopt();
+        WIDGET.update();
+        $(window).resize(function(){
+            WIDGET.adopt();
+        });
+        $('.next').click(function(e){
+            e.preventDefault();
+            if($(this).is('.active')) {
+                WIDGET.next();
+            }
+        });
+        $('.secure-box:first h3').click(function(e){
+            e.preventDefault();
+            $(this).next().slideToggle('slow',function(){
+                WIDGET.adopt();
+            });
+        });
+        $('#BuyauthForm_phone').mask('(000) 000-00-00');
+        $('.film-name-placeholder').html('<span class="film-placeholder">'+$('#wi-film').text()+'</span><span class="session-placeholder">'+$('#wi-session').text()+'</span>');
+    });
+</script>        <div style="display: none;" id="loading-template">
+            <div class="loader">
+                <div class="img-holder">
+                    <img src="/img/preloader.gif?v=1.235" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="legalline">© 2007-2015 «КАРО Фильм Менеджмент»</div>
+        </div>
+    </div>
+</div>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63608560-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter30683573 = new Ya.Metrika({id:30683573,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>&lt;div&gt;&lt;img src="//mc.yandex.ru/watch/30683573" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body></html>
